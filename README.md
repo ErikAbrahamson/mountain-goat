@@ -1,11 +1,11 @@
 #MTB Project  
 ##Purpose:  
 This application will allow a user to explore mountain bike trails given their current location or specified location. The user will be able to view, mark, and save trails they have ridden or want to ride.
-##Objectives:
+##Objectives:  
 1. Build a SPA that utilizes Strava segment information to track and explore mountain bike trails and conditions  
 1. Have a database for users to keep track of trails they have done and what they want to do  
 1. Rate trails based on criteria such as distance, elevation change, and average grade  
-##Technologies:
+##Technologies:  
 1. MongoDB && Express - user database  
 1. Mocha && Chai - testing  
 1. Gulp - project automation and management
