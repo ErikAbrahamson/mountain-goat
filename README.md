@@ -14,6 +14,6 @@ This application will allow a user to explore mountain bike trails given their c
 1. AngularJS - front-end & MVC  
 1. Node.js - back-end management  
 1. Strava API v3 - trail data  
-##Stretch Goal:  
 
+##Stretch Goal:  
 1. Using Ghost for Node, allow a user to comment or create a description of their experience on the trail and have it listed under trail information
