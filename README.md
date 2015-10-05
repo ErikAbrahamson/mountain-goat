@@ -5,6 +5,7 @@ This application will allow a user to explore mountain bike trails given their c
 1. Build a SPA that utilizes Strava segment information to track and explore mountain bike trails and conditions  
 1. Have a database for users to keep track of trails they have done and what they want to do  
 1. Rate trails based on criteria such as distance, elevation change, and average grade  
+
 ##Technologies:  
 1. MongoDB && Express - user database  
 1. Mocha && Chai - testing  
@@ -14,4 +15,5 @@ This application will allow a user to explore mountain bike trails given their c
 1. Node.js - back-end management  
 1. Strava API v3 - trail data  
 ##Stretch Goal:  
+
 1. Using Ghost for Node, allow a user to comment or create a description of their experience on the trail and have it listed under trail information
