@@ -1,16 +1,14 @@
-crudApp.directive('myTitle', function() {
+app.directive('segmentSelection', function() {
   return {
-    restrict: 'AE',
-    replace: 'false',
-    template:
-      '<h1>CRUD 4</h1>'
-  };
-});
-
-crudApp.directive('editModal', function() {
-  return {
-    restrict: 'AEC',
-    replace: 'false',
-    templateUrl: './partials/modal.html'
+    restrict: 'A',
+    transclude: true,
+    link: function($scope, element, attrs) {
+      console.log(attrs);
+      element.on('click', function() {
+        colors = ['red','green','blue'];
+        element.css('background-color', 'red');
+        $scope.goodbye = "goodbye!";
+      });
+    }
   };
 });

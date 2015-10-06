@@ -1,8 +1,47 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css");
+nav {
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 3.5em;
+  border-radius: 0 !important;
 }
-
-a {
-  color: #00B7FF;
+.container {
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 50em;
+  background-color: rgba(10, 40, 45, 0.2);
+  text-align: center;
+}
+.search-div {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block;
+  top: 50%;
+}
+input[type="text"],
+.glyphicon {
+  font-size: 26px;
+}
+.search-bar {
+  margin: 0 auto;
+  display: inline;
+  width: 50%;
+  height: 2em;
+}
+.inner-addon {
+  position: relative;
+}
+.inner-addon .glyphicon {
+  position: absolute;
+  padding-left: 405px;
+  padding-top: 13px;
+  pointer-events: none;
 }

@@ -1,1 +1,1 @@
-var crudApp = angular.module('crudApp', []);
+var app = angular.module('myApp', ['ngAnimate']);
