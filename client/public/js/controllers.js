@@ -1,6 +1,6 @@
 app.controller('mainController', function($scope, $http) {
 
-  $scope.getStuff = function() {
+  $scope.getSegments = function() {
     $http.get('/api/service')
       .success(function(data) {
         $scope.trails = data.segments;
