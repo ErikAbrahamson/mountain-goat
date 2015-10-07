@@ -6,7 +6,7 @@ function initMap() {
     mapTypeId: google.maps.MapTypeId.TERRAIN
   });
 
-  function zoomToTrail(trai) {
+  function zoomToTrail(trail) {
     var bounds = new google.maps.LatLngBounds();
     var points = trail.getPath().getArray();
     for (var i = 0; i < points.length; i++) {
