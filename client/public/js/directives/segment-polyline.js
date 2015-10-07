@@ -1,11 +1,3 @@
-app.directive('segmentThumb', function() {
-  return {
-    restrict: 'E',
-    transclude: 'false',
-    templateUrl: './partials/thumb.html',
-  };
-});
-
 app.directive('segmentPolyline', function() {
   return {
     restrict: 'E',
@@ -13,7 +5,6 @@ app.directive('segmentPolyline', function() {
     transclude: false,
     template: '<div></div>',
     link: function($scope, element, attrs) {
-      console.log(attrs);
 
       element.attr('id', 'map_canvas' + $scope.trail.id).addClass('map-thumbs');
 
