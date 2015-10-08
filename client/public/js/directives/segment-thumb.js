@@ -1,7 +1,7 @@
 app.directive('segmentThumb', function() {
   return {
     restrict: 'E',
-    transclude: 'false',
+    transclude: false,
     templateUrl: './partials/thumb.html',
   };
 });

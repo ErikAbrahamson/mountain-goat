@@ -6,11 +6,10 @@ app.directive('segmentPolyline', function() {
     template: '<div></div>',
     link: function($scope, element, attrs) {
 
-      element.attr('id', 'map_canvas' + $scope.trail.id).addClass('map-thumbs');
+      var mapID = 'map_canvas_' + $scope.trail.id;
+      element.attr('id', mapID).addClass('map-thumbs');
 
-      var map = new google.maps.Map(document.getElementById(
-        'map_canvas' + $scope.trail.id
-      ), {
+      var map = new google.maps.Map(document.getElementById(mapID), {
         mapTypeId: google.maps.MapTypeId.TERRAIN
       });
 
