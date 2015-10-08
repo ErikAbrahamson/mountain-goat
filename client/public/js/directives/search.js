@@ -15,9 +15,6 @@ app.directive('segmentSearch', function() {
 
           if (status == google.maps.GeocoderStatus.OK) {
 
-            console.log(results[0]);
-
-            // if (!results[0].geometry.hasOwnProperty('bounds')) $scope.hasError = true;
             if (results[0].geometry.hasOwnProperty('bounds')) {
 
               var swLat = results[0].geometry.bounds.Qa.J,
