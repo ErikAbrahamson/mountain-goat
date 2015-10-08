@@ -3,9 +3,9 @@ var router = express.Router();
 var strava = require('strava-v3');
 var mongoose = require('mongoose-q')(require('mongoose'), { spread: true });
 
-router.get('/service', function(req, res) {
+router.post('/service', function(req, res) {
   strava.segments.explore({
-    bounds: '39.6998089,-105.24196089999998,39.7871034,-105.1618588',
+    bounds: req.body.bounds,
     statusCallback: function(err, payload) {
       if (!err) {
       res.json(payload);
