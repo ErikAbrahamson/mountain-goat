@@ -5,7 +5,7 @@ var mongoose = require('mongoose-q')(require('mongoose'), { spread: true });
 
 router.get('/service', function(req, res) {
   strava.segments.explore({
-    bounds: '37.017734,-109.025520,40.984229,-105.134964',
+    bounds: '39.6998089,-105.24196089999998,39.7871034,-105.1618588',
     statusCallback: function(err, payload) {
       if (!err) {
       res.json(payload);

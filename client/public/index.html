@@ -27,15 +27,18 @@
     </nav>
 
     <div class="container">
+
       <div class="row">
         <div class="col-lg-12">
           <h3>Trails</h3>
         </div>
       </div>
 
+
       <div class="row text-center">
 
-        <ng-include src="/partials/search.html"></ng-include>
+        <segment-search></segment-search>
+
 
         <segment-thumb></segment-thumb>
 
@@ -58,5 +61,6 @@
     <script type="text/javascript" src="js/services.js"></script>
     <script type="text/javascript" src="js/directives/segment-thumb.js"></script>
     <script type="text/javascript" src="js/directives/segment-polyline.js"></script>
+    <script type="text/javascript" src="js/directives/search.js"></script>
   </body>
 </html>
