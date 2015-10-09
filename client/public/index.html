@@ -6,7 +6,7 @@
     <title>MTB Trail Tracker</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" href="http://css-spinners.com/css/spinner/wobblebar.css" type="text/css">
+    <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
   </head>
 
   <body ng-controller="mainController">
@@ -40,7 +40,9 @@
         <segment-search></segment-search>
 
         <div class="row">
-          <div ng-show="loading" class="col-lg-12 wobblebar-loader"></div>
+          <div ng-show="loading" class="col-lg-12">
+            <div class="throbber-loader"></div>
+          </div>
         </div>
 
         <segment-thumb></segment-thumb>
