@@ -27,8 +27,10 @@ app.directive('segmentSearch', function() {
             }
           } else {
             $scope.getSegments(null);
-            console.log(google.maps.GeocoderStatus);
-            $scope.hasError = true;
+            if ($scope.location.search.length > 0) {
+              $scope.loading = false;
+              $scope.hasError = false;
+            }
           }
         });
       };
