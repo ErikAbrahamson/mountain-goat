@@ -23,8 +23,8 @@ app.directive('segmentSearch', function() {
                   neLatV = results[0].geometry.viewport.Qa.j,
                   neLonV = results[0].geometry.viewport.Ma.J;
                   bounds = swLatV + ',' + swLonV + ',' + neLatV + ',' + neLonV;
-            return $scope.getSegments(bounds);
-          }
+              return $scope.getSegments(bounds);
+            }
           } else {
             $scope.getSegments(null);
             console.log(google.maps.GeocoderStatus);
