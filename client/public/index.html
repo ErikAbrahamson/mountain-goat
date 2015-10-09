@@ -27,7 +27,7 @@
       </div>
     </nav><br>
 
-      <div id="header" class="jumbotron">
+      <div ng-show="view.thumbs" id="header" class="jumbotron">
         <div class="container">
           <segment-search></segment-search>
         </div>
@@ -39,12 +39,11 @@
         </div>
       </div>
 
-      <div class="container">
+      <div ng-show="view.thumbs" id="thumb-view" class="container">
         <div class="row text-center">
           <segment-thumb></segment-thumb>
         </div>
       </div>
-
 
     <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClbmjauylLaomujlpDYsvy264XYm4MAjw&callback=initMap&libraries=geometry,visualization">
