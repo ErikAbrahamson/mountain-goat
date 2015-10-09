@@ -1,3 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Puritan:400,400italic,700,700italic|Sarina);
+.navbar-brand {
+  font-family: 'sarina', cursive;
+  font-size: 2.25em;
+  background: -webkit-linear-gradient(#FFC0CB, #e416f8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+p, a, h1, h2, h3, h4, span {
+  font-family: 'puritan', sans-serif;
+}
 .map-thumbs {
   width:100%;
   height: 250px;

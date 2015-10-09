@@ -19,6 +19,7 @@ mongoose.connect(config.mongoURI[app.settings.env]);
 
 // *** routes *** //
 var api = require('./routes/api.js');
+// var user = require('./routes/userAPI.js');
 
 // *** view engine *** //
 var swig = new swig.Swig();
