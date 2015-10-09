@@ -7,7 +7,7 @@ app.directive('segmentSearch', function() {
     link: function($scope, element, attrs) {
       var geocoder = new google.maps.Geocoder();
       $scope.codeAddress = function() {
-        geocoder.geocode({ 'address': $scope.location.search},
+        geocoder.geocode({ 'address': $scope.location.search },
           function(results, status) {
           if (status == google.maps.GeocoderStatus.OK) {
             if (results[0].geometry.hasOwnProperty('bounds')) {
