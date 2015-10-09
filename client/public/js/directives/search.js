@@ -7,8 +7,9 @@ app.directive('segmentSearch', function() {
     link: function($scope, element, attrs) {
       var geocoder = new google.maps.Geocoder();
       $scope.codeAddress = function() {
-        var address = document.getElementById('address').value;
-        geocoder.geocode({ 'address': address }, function(results, status) {
+        console.log($scope.location.search);
+        // var address = document.getElementById('address').value;
+        geocoder.geocode({ 'address': $scope.location.search }, function(results, status) {
           if (status == google.maps.GeocoderStatus.OK) {
             if (results[0].geometry.hasOwnProperty('bounds')) {
               var swLat = results[0].geometry.bounds.Qa.J,
@@ -27,6 +28,7 @@ app.directive('segmentSearch', function() {
           }
           } else {
             $scope.getSegments(null);
+            console.log(google.maps.GeocoderStatus);
             $scope.hasError = true;
           }
         });

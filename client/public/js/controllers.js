@@ -1,6 +1,7 @@
 app.controller('mainController', function($scope, $http) {
 
   $scope.hasError = false;
+  $scope.location = { search: ''};
 
   $scope.getSegments = function(bounds) {
     $http.post('/api/service', { 'bounds': bounds })
