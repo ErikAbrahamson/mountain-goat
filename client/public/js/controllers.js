@@ -1,7 +1,6 @@
 app.controller('mainController', function($scope, $http) {
 
   $scope.view = { thumbs: true, single: false };
-
   $scope.hasError = false;
   $scope.location = { search: '' };
   $scope.currentTrail = { currentID: ''};

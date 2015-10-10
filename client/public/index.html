@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>MTB Trail Tracker</title>
+    <title>Mountain Goat</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="http://css-spinners.com/css/spinners.css" type="text/css">
@@ -27,7 +27,7 @@
       </div>
     </nav><br>
 
-      <div ng-show="view.thumbs" id="header" class="jumbotron">
+      <div ng-hide="view.single" ng-show="view.thumbs" id="header" class="jumbotron ng-hide-add">
         <div class="container">
           <segment-search></segment-search>
         </div>
@@ -39,7 +39,7 @@
         </div>
       </div>
 
-      <div ng-show="view.thumbs" id="thumb-view" class="container">
+      <div ng-hide="view.single" ng-show="view.thumbs" id="thumb-view" class="container ng-hide-add">
         <div class="row text-center">
           <segment-thumb></segment-thumb>
         </div>
