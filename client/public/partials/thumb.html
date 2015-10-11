@@ -2,8 +2,15 @@
   <div class="thumbnail">
     <segment-polyline></segment-polyline>
     <div class="caption">
-      <h3>{{ trail.name }}</h3>
+      <h3 class="trail-name">{{ trail.name }}</h3>
+
+      <div class="thumb-stats">
+
       <button ng-click="showTrail()" type="button" class="btn btn-default">View</button>
+
+      <h4>{{ trail.distance | distance }} Miles</h4>
+      <span>{{ trail.avg_grade }}</span>
+      <span>{{ trail.climb_category | climb }}</span>
     </div>
   </div>
 </div>
