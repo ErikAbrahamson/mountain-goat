@@ -1,6 +1,6 @@
 app.directive('editModal', function() {
   return {
-    restrict: 'AEC',
+    restrict: 'EA',
     replace: false,
     templateUrl: './partials/modal.html'
   };
