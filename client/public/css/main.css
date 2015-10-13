@@ -15,9 +15,7 @@ body {
   border-bottom-right-radius: 0;
   background-color: #596073;
   border: none;
-
 }
-
 .right-btn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -160,7 +158,6 @@ input.transparent-input {
     width: 0px;
     height: 0px;
 }
-
 .animate-enter.animate-enter-active,
 .animate-leave {
     opacity: 1;
@@ -172,7 +169,6 @@ input.transparent-input {
   height: 100%;
   padding: 0;
 }
-
 .modal-content {
   height: 90%;
   border-radius: 0;
