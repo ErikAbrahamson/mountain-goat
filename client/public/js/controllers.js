@@ -5,6 +5,7 @@ app.controller('mainController', function($scope, $http) {
   $scope.location = { search: '' };
   $scope.trailMap = {};
 
+
   $scope.renderMap = function() {
     $scope.view.single = true;
     console.log($scope.view.single);

@@ -13,11 +13,10 @@ app.directive('singleView', function() {
 
       element.attr('id', mapID).addClass('map-view');
 
-
-        map = new google.maps.Map(document.getElementById(mapID), {
-          mapTypeId: google.maps.MapTypeId.TERRAIN,
-          disableDefaultUI: true
-        });
+      map = new google.maps.Map(document.getElementById(mapID), {
+        mapTypeId: google.maps.MapTypeId.TERRAIN,
+        disableDefaultUI: true
+      });
 
       function zoomToTrail(trail) {
         var bounds = new google.maps.LatLngBounds();
@@ -27,7 +26,8 @@ app.directive('singleView', function() {
         }
         map.fitBounds(bounds);
       }
-      var trail = new google.maps.Polyline({
+
+      var singleTrail = new google.maps.Polyline({
         path: buildPoly($scope.trail.points),
         geodesic: true,
         strokeColor: '#0D0',
@@ -35,19 +35,11 @@ app.directive('singleView', function() {
         strokeWeight: 3
       });
 
-      trail.setMap(map);
-      zoomToTrail(trail);
+      singleTrail.setMap(map);
+      zoomToTrail(singleTrail);
 
-      google.maps.event.addDomListener(window, 'load', resizeMap());
       google.maps.event.addDomListener(window, "resize", resizingMap());
-
-      element.bind('load', function() {
-        google.maps.event.trigger(map, 'resize');
-        zoomToTrail(trail);
-        resizeMap();
-      });
-
-      $scope.trailMap = map;
+      google.maps.event.trigger(map, 'resize');
 
       function buildPoly(pathString) {
         return pathString ? google.maps.geometry.encoding.decodePath(pathString) : null;
@@ -60,8 +52,20 @@ app.directive('singleView', function() {
         if (typeof map == 'undefined') return;
          var center = map.getCenter();
          google.maps.event.trigger(map, 'resize');
-         map.setCenter(center);
+         trail.setMap(map);
+         zoomToTrail(trail);
       }
+      var currCenter = map.getCenter();
+      console.log(currCenter);
+
+      element.on('shown.bs.modal', function(e) {
+        google.maps.event.trigger(map, 'resize');
+        return map.setCenter();
+      });
+      element.on('load', function(e) {
+        google.maps.event.trigger(map, 'resize');
+        return map.setCenter();
+      });
     }
   };
 });

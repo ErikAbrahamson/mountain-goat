@@ -6,7 +6,6 @@ app.directive('segmentPolyline', function() {
     template: '<div></div>',
     link: function($scope, element, attrs) {
 
-
       var mapID =
         document.getElementById('map_thumb_' + $scope.trail.id) ?
           'map_view_' + $scope.trail.id : 'map_thumb_' + $scope.trail.id;
@@ -40,6 +39,12 @@ app.directive('segmentPolyline', function() {
       function buildPoly(pathString) {
         return pathString ? google.maps.geometry.encoding.decodePath(pathString) : null;
       }
+
+      element.on('shown.bs.modal', function(e) {
+        google.maps.event.trigger(map, 'resize');
+        return zoomToTrail(trail);
+      });
+
     }
   };
 });

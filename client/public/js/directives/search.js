@@ -9,7 +9,6 @@ app.directive('segmentSearch', function() {
       $scope.codeAddress = function() {
         geocoder.geocode({ 'address': $scope.location.search },
           function(results, status) {
-            console.log(results[0]);
           if (status == google.maps.GeocoderStatus.OK) {
             if (results[0].geometry.hasOwnProperty('bounds')) {
               var swLat = results[0].geometry.bounds.Pa.I,
