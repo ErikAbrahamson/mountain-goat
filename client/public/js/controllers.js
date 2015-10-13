@@ -3,10 +3,11 @@ app.controller('mainController', function($scope, $http) {
   $scope.view = { thumbs: true, single: false };
   $scope.hasError = false;
   $scope.location = { search: '' };
-  $scope.currentTrail = {};
+  $scope.trailMap = {};
 
-  $scope.showTrail = function(id) {
-    console.log($scope.trails.id);
+  $scope.renderMap = function() {
+    $scope.view.single = true;
+    console.log($scope.view.single);
   };
 
   $scope.getSegments = function(bounds) {

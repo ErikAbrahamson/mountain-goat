@@ -5,12 +5,21 @@ app.directive('segmentPolyline', function() {
     transclude: false,
     template: '<div></div>',
     link: function($scope, element, attrs) {
-      var mapID = 'map_canvas_' + $scope.trail.id;
+
+
+      var mapID =
+        document.getElementById('map_thumb_' + $scope.trail.id) ?
+          'map_view_' + $scope.trail.id : 'map_thumb_' + $scope.trail.id;
+
       element.attr('id', mapID).addClass('map-thumbs');
+
       var map = new google.maps.Map(document.getElementById(mapID), {
         mapTypeId: google.maps.MapTypeId.TERRAIN,
+        draggable: false,
+        scrollwheel: false,
         disableDefaultUI: true
       });
+
       function zoomToTrail(trail) {
         var bounds = new google.maps.LatLngBounds();
         var points = trail.getPath().getArray();
@@ -22,9 +31,9 @@ app.directive('segmentPolyline', function() {
       var trail = new google.maps.Polyline({
         path: buildPoly($scope.trail.points),
         geodesic: true,
-        strokeColor: '#0D0',
+        strokeColor: '#E21C7F',
         strokeOpacity: 1.0,
-        strokeWeight: 3
+        strokeWeight: 3.5
       });
       trail.setMap(map);
       zoomToTrail(trail);
