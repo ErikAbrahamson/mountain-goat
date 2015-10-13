@@ -165,14 +165,14 @@ input.transparent-input {
     height: 30px;
 }
 .modal-dialog {
-  width: 90%;
+  width: 98%;
   height: 100%;
   padding: 0;
 }
 .modal-content {
-  height: 90%;
+  height: 94%;
   border-radius: 0;
-  background-color: rgba(100,180,255, 0.5);
+  background-color: rgba(164, 184, 203, 0.6);
 }
 
 @media screen and (min-width: 1200px) {
