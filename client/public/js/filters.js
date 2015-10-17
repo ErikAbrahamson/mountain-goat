@@ -6,7 +6,7 @@ app.filter('distance', function () {
 
 app.filter('climb', function() {
   return function(input) {
-    if (input === 0) return 'Average climb';
+    if (input === 0) return 'Moderate climb';
     else if (input === 1) return 'Steep climb';
     else if (input === 2 || input === 3) return 'Moderate climb';
     else if (input === 4) return 'Easy climb';
