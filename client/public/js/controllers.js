@@ -14,7 +14,6 @@ app.controller('mainController', function($scope, $http) {
     $scope.loading = true;
     $http.post('/api/service', { 'bounds': bounds })
       .success(function(data) {
-        console.log(data);
         if ($scope.location.search.length !== 0) $scope.hasError = false;
         if (data.segments.length === 0) $scope.hasError = true;
         else $scope.hasError = false;

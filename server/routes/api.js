@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var strava = require('strava-v3');
 var mongoose = require('mongoose-q')(require('mongoose'), { spread: true });
+var najax = require('najax');
 
 router.post('/service', function(req, res) {
   strava.segments.explore({
