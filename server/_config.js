@@ -1,8 +1,8 @@
 var config = {};
 
 config.mongoURI = {
-  development: 'mongodb://localhost/vehicles',
-  test: 'mongodb://localhost/vehicles-test'
+  development: 'mongodb://localhost/mountaingoat',
+  test: 'mongodb://localhost/mountaingoat'
 };
 
 module.exports = config;
