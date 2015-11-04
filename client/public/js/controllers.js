@@ -8,13 +8,13 @@ app.controller('mainController', function($scope, $http) {
 
   $scope.renderMap = function() {
     $scope.view.single = true;
-    console.log($scope.view.single);
   };
 
   $scope.getSegments = function(bounds) {
     $scope.loading = true;
     $http.post('/api/service', { 'bounds': bounds })
       .success(function(data) {
+        console.log(data);
         if ($scope.location.search.length !== 0) $scope.hasError = false;
         if (data.segments.length === 0) $scope.hasError = true;
         else $scope.hasError = false;
