@@ -37,7 +37,15 @@ app.directive('segmentPolyline', function() {
       trail.setMap(map);
       zoomToTrail(trail);
       function buildPoly(pathString) {
+        xyz(pathString);
         return pathString ? google.maps.geometry.encoding.decodePath(pathString) : null;
+      }
+      function xyz(poly) {
+        var en = google.maps.geometry.encoding.decodePath(poly);
+        console.log(en);
+        en.forEach(function(point) {
+          console.log(point.lat.a, point.lat.b, point.lon.a, point.lon.b);
+        });
       }
 
       element.on('shown.bs.modal', function(e) {
