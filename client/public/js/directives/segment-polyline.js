@@ -22,6 +22,7 @@ app.directive('segmentPolyline', function() {
       function zoomToTrail(trail) {
         var bounds = new google.maps.LatLngBounds();
         var points = trail.getPath().getArray();
+        console.log(points.toString());
         for (var i = 0; i < points.length; i++) {
           bounds.extend(points[i]);
         }
@@ -34,20 +35,12 @@ app.directive('segmentPolyline', function() {
         strokeOpacity: 1.0,
         strokeWeight: 3.5
       });
+
       trail.setMap(map);
       zoomToTrail(trail);
       function buildPoly(pathString) {
-        xyz(pathString);
         return pathString ? google.maps.geometry.encoding.decodePath(pathString) : null;
       }
-      function xyz(poly) {
-        var en = google.maps.geometry.encoding.decodePath(poly);
-        console.log(en);
-        en.forEach(function(point) {
-          console.log(point.lat.a, point.lat.b, point.lon.a, point.lon.b);
-        });
-      }
-
       element.on('shown.bs.modal', function(e) {
         google.maps.event.trigger(map, 'resize');
         return zoomToTrail(trail);
