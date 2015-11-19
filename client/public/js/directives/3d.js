@@ -18,10 +18,18 @@ var trace = {
 };
 
 function parseString(polyline) {
-  var brackets = new RegExp(/(\(|\))/g);
-  var first = polyline.replace(brackets, ' ').split(' , ');
-  console.log(first);
-
+  var coords = [], brackets = new RegExp(/(\(|\))/g);
+  var array = polyline.replace(brackets, ' ').split(' , ');
+  for (var i = 0; i < array.length; i++) {
+    coords.push(array[i].split(','));
+  }
+  for (var k = 0; k < coords.length; k++) {
+    for (var j = 0; j < coords[k].length; j++) {
+      coords[k][j].trim();
+      coords[k][j] = +coords[k][j];
+    }
+  }
+  return coords;
 }
 
 // function cartesian(x, y, x) {}
