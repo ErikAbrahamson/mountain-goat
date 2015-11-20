@@ -16,8 +16,22 @@ var trace = {
   },
   type: 'scatter3d'
 };
+var data = [trace];
+var layout = {
+  title: '3D Line Plot',
+  autosize: false,
+  width: 500,
+  height: 500,
+  margin: {
+    l: 0,
+    r: 0,
+    b: 0,
+    t: 65
+  }
+};
+Plotly.newPlot('3d-plot', data, layout);
 
-function parseString(polyline) {
+function parseString(polyline, trace) {
   var coords = [], brackets = new RegExp(/(\(|\))/g);
   var array = polyline.replace(brackets, ' ').split(' , ');
   for (var i = 0; i < array.length; i++) {
@@ -29,11 +43,21 @@ function parseString(polyline) {
       coords[k][j] = +coords[k][j];
     }
   }
-  return coords;
+  for (var l = 0; l < coords.length; l++) {
+    var temp = createXYZ(coords[l][0], coords[l][1]);
+    trace.x.push(temp.x);
+    trace.y.push(temp.y);
+    trace.z.push(temp.z);
+  }
 }
 
-// function cartesian(x, y, x) {}
-//
-// x = R * cos(lat) * cos(lon)
-// y = R * cos(lat) * sin(lon)
-// z = R *sin(lat)
+function createXYZ(lat, lon) {
+  Math.radians = function(coord) { return coord * (Math.PI/180); };
+  var newLat = Math.radians(lat), newLon = Math.radians(lon);
+  var R = 6378137.0, XYZ = {
+      x: R * Math.cos(newLat) * Math.cos(newLon),
+      y: R * Math.cos(newLat) * Math.sin(newLon),
+      z: R * Math.sin(newLat)
+    };
+  return XYZ;
+}

@@ -10,6 +10,12 @@ body {
 .navbar {
   height: 56px;
 }
+
+#3d-plot {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .left-btn {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
