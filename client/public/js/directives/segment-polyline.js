@@ -22,6 +22,7 @@ app.directive('segmentPolyline', function() {
       function zoomToTrail(trail) {
         var bounds = new google.maps.LatLngBounds();
         var points = trail.getPath().getArray();
+        $scope.points = points.toString();
         console.log(points.toString());
         for (var i = 0; i < points.length; i++) {
           bounds.extend(points[i]);
