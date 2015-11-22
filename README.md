@@ -1,4 +1,5 @@
-#MTB Project  
+#Mountain Goat  
+![](screen.jpg)
 ##Purpose:  
 This application will allow a user to explore mountain bike trails given their current location or specified location. The user will be able to view, mark, and save trails they have ridden or want to ride.
 ##Objectives:  
@@ -16,4 +17,4 @@ This application will allow a user to explore mountain bike trails given their c
 1. Strava API v3 - trail data  
 
 ##Stretch Goal:  
-1. Using Ghost for Node, allow a user to comment or create a description of their experience on the trail and have it listed under trail information
+1. Currently integrating Plotly.js to render trails in a 3D space
