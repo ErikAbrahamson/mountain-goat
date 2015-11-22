@@ -1,5 +1,5 @@
 #Mountain Goat  
-![](screen.jpg)
+![](client/public/img/screen.jpg)
 ##Purpose:  
 This application will allow a user to explore mountain bike trails given their current location or specified location. The user will be able to view, mark, and save trails they have ridden or want to ride.
 ##Objectives:  
