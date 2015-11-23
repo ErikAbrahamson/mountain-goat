@@ -1,6 +1,5 @@
 angular.module('myApp').controller('loginController', [
-  '$scope', '$location', 'AuthService',
-  function ($scope, $location, AuthService) {
+  '$scope', '$location', 'AuthService', function ($scope, $location, AuthService) {
     $scope.login = function () {
 
       $scope.error = false;

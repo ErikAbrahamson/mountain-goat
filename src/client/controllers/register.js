@@ -1,6 +1,5 @@
 angular.module('myApp').controller('registerController', [
-  '$scope', '$location', 'AuthService',
-  function ($scope, $location, AuthService) {
+  '$scope', '$location', 'AuthService', function ($scope, $location, AuthService) {
     $scope.register = function () {
 
       $scope.error = false;

@@ -1,6 +1,5 @@
 angular.module('myApp').controller('logoutController', [
-  '$scope', '$location', 'AuthService',
-  function ($scope, $location, AuthService) {
+  '$scope', '$location', 'AuthService', function ($scope, $location, AuthService) {
     $scope.logout = function () {
 
       AuthService.logout()
