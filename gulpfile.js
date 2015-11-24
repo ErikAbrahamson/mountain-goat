@@ -1,7 +1,3 @@
-/**
- * Module Dependencies
- */
-
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var browserSync = require('browser-sync');
@@ -13,11 +9,6 @@ var minifyCSS = require('gulp-minify-css');
 var clean = require('gulp-clean');
 var concat = require('gulp-concat');
 var runSequence = require('run-sequence');
-
-
-/**
- * Config
- */
 
 var paths = {
   styles: [
